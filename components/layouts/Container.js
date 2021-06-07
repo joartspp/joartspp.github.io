@@ -177,6 +177,9 @@ const MainContent = ({kak}) => {
                                 </div>
                                 <div className={layoutStyle.subText}>เว็บไซต์เรซูเม่
                                 <br></br>
+                                <mark>
+                                    <a href="https://github.com/joartspp/joartspp.github.io" target="_blank">Source Code</a>
+                                </mark>
                                 </div>
                                 <div className={layoutStyle.divpProject}>
                                     <p className={layoutStyle.pProject}>
