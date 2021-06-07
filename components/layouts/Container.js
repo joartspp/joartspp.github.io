@@ -121,6 +121,13 @@ const MainContent = ({kak}) => {
                                         และ Thermocouple ที่เป็นอุปกรณ์สำหรับวัดอุณหภูมิระดับอุตสาหกรรม โดยผมได้ทำการออกแบบ ระบบการรับ-ส่งข้อมูล ที่ใช้ในการเก็บข้อมูลและการมอนิเตอร์เอง โดยการนำความรู้ทางด้านการเขียน Web application
                                         มาประยุกต์ใช้ในโครงงานนี้ Frontend ที่ใช้ในการมอนิเตอร์ดูค่าต่างๆ โดยใช้ <mark>Vue.JS,HTML,CSS,JS</mark> และ Backend ที่ใช้ในการรับ-ส่งข้อมูลโดยใช้ API ที่เขียนจาก <mark>ExpressJS(Node.Js)</mark> และเก็บข้อมูลในรูปแบบของ JSON
                                     </p>
+                                    <div style={{textAlign:'center'}}>
+                                        <img className={layoutStyle.imgExample} src="https://cdn.discordapp.com/attachments/756089847940251681/851526375306821632/unknown.png" /><br></br>
+                                        <img className={layoutStyle.imgExample} src="https://cdn.discordapp.com/attachments/756089847940251681/851526398984192020/unknown.png" /><br></br>
+                                        <img className={layoutStyle.imgExample} src="https://cdn.discordapp.com/attachments/756089847940251681/851526423037870080/unknown.png" /><br></br>
+                                        <img className={layoutStyle.imgExample} src="https://cdn.discordapp.com/attachments/756089847940251681/851526454025650236/unknown.png" /><br></br>
+                                        <img className={layoutStyle.imgExample} src="https://cdn.discordapp.com/attachments/756089847940251681/851526475831836692/unknown.png" /><br></br>
+                                    </div>
                                 </div>
                             </div>
                         </div>
