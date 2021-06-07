@@ -1,0 +1,178 @@
+import Image from 'next/image';
+
+import React , { useState , useEffect } from 'react';
+import axios from 'axios';
+
+import { sleep } from '../utils/delay';
+
+import  { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import layoutStyle from '../../styles/layouts.module.css';
+
+library.add(fas , fab , far);
+
+
+const MainContent = ({kak}) => {
+    return (
+        <>
+            <div aria-label="content" style={{padding:'0',marginTop:'10px'}}>
+                <div className="wrapper">
+                    {/* Introduce */}
+                    <div className="container" id="IntroduceMySelf">
+                        <div className={layoutStyle.HeaderTopic}>About Me</div>
+                        <div className="row" style={{
+                            marginLeft:'5px',
+                            marginRight:'5px',
+                            borderBottom:"dashed 2px #CCCCCC",
+                        }}>
+                            <div className="col-xs-12 col-sm-4 col-md-3" style={{textAlign:'center'}}>
+                                <span className={layoutStyle.pictureProfile} style={{
+                                    backgroundImage:'url(/img/profile_nisit.jpg)',
+                                    marginRight:'10px'
+                                }}></span>
+                            </div>
+                            <div className="col-xs-12 col-sm-8 col-md-9" style={{
+                                padding:'10px'
+                            }}>
+                                <p className={layoutStyle.pIntro}>
+                                    Hello, My name is <b>Supakorn Siridang.</b> You can me <b>"Joe"</b>. I'm 22 years old.
+                                    I'm going to graduate from Kasetsart University with a bachelor's degree in Mechanical Engineering.
+                                    While studying at the university I'm interested to apply for coding because I have a chance to work
+                                    as a game developer. This experience allows me to develop my programming skill. In my spare time,
+                                    I enjoy learning new things and improve myself such as coding.
+                                    <br></br>
+                                    <br></br>
+                                    <mark>
+                                    I'm ready to learn new things, work-hard, learn to work quickly
+                                    </mark>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Projects */}
+                    <div className="container" id="Projects" style={{marginTop:'10px'}}>
+                        <div className={layoutStyle.HeaderTopic}>Projects</div>
+                        <div className="row" style={{
+                            // display:'flex',
+                            // flexDirection:'column',
+                            marginLeft:'5px',
+                            marginRight:'5px',
+                            borderBottom:"dashed 2px #CCCCCC",
+                        }}>
+                            <div className="col-xs-12" style={{textAlign:'center',marginBottom:'40px'}}>
+                                <div className={layoutStyle.projectText} style={{
+                                    width:'100%'
+                                }}>
+                                    - University Project (Senior Project) -
+                                </div>
+                                <div className={layoutStyle.subText}>A study and analysis of rooptop solar energy potential for electricity generation for building in
+                                <br></br>Facuty of Engineering, Kasetsart University and analyze the feasibility of the project for installing solar panels
+                                <br></br>
+                                <mark>
+                                    <a href="https://solarcell.xjoez.com" target="_blank">Documents link</a>
+                                </mark>
+                                </div>
+                                <div className={layoutStyle.divpProject} style={{
+                                    borderBottom:'dashed 2px #ccc',
+                                    width:'50%',
+                                    marginRight:'auto',
+                                    marginLeft:'auto'
+                                }}></div>
+                            </div>
+                            <div className="col-xs-12" style={{textAlign:'center',marginBottom:'40px'}}>
+                                <div className={layoutStyle.projectText} style={{
+                                    width:'100%'
+                                }}>
+                                    - University Project (Term Project) -
+                                </div>
+                                <div className={layoutStyle.subText}>Temperature measurement with calibration and temperature monitoring via Netpie
+                                <br></br>
+                                <mark>
+                                    <a href="https://www.canva.com/design/DAEacQ_3zfI/kVXp0Ey_ORouv29Y84bXPw/view?utm_content=DAEacQ_3zfI&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank">Presentation link</a>
+                                </mark>
+                                
+                                <mark style={{marginLeft:'10px'}}>
+                                    <a href="https://github.com/joartspp/Adruino-MeasurementTerm-Code" target="_blank">Source Code</a>
+                                </mark>
+                                </div>
+                                <div className={layoutStyle.divpProject}>
+                                    <p className={layoutStyle.pProject}>
+                                        This project is a part of Engineering Measurement : This project study about Arduino and monitoring via Netpie (Public Broker) but I have applied my programming skill to build my private
+                                        web application to monitoring data. It have front-end (Vue.Js + Chart.js + Bootstrap) back-end (Node.Js + ExpressJS) and database using JSON file on local files. I using Arduino ESP8266 (WIFI)
+                                        send request and data to back-end (API) and back-end is receive request and data and save to JSON file in local directory.
+                                    </p>
+                                </div>
+                                <div style={{
+                                    borderBottom:'dashed 2px #ccc',
+                                    width:'50%',
+                                    marginRight:'auto',
+                                    marginLeft:'auto'
+                                }}></div>
+                            </div>
+                            <div className="col-xs-12" style={{textAlign:'center',marginBottom:'40px'}}>
+                                <div className={layoutStyle.projectText} style={{
+                                    width:'100%'
+                                }}>
+                                    - Other Project (Activity) -
+                                </div>
+                                <div className={layoutStyle.subText}>Game developer (Full-Stack) and Script Seller on GTAV multiplayer platform (FiveM)
+                                <br></br>
+                                <mark>
+                                    <a href="https://github.com/joartspp/DyzCarSystem" target="_blank">Example Source Code</a>
+                                </mark>
+                                <mark style={{marginLeft:'10px'}}>
+                                    <a href="https://youtu.be/tuNyM0Sbf9c" target="_blank">Example Video</a>
+                                </mark>
+                                </div>
+                                <div className={layoutStyle.divpProject}>
+                                    <p className={layoutStyle.pProject}>
+                                        FiveM is a popular GTAV custom mods multiplayer platform. FiveM is support for multiple programming languages (Lua,JS,C#) and
+                                        in-game you can design and develope user interface (NUI). NUI like web application you can develope NUI via multiple framework or library for
+                                        develop web application (VueJs,React,HTML,CSS,JS). Now FiveM have 224.1K people to playing and 100+ servers in Thailand. Ps. This source code created by Dyztiny 
+                                    </p>
+                                </div>
+                                <div style={{
+                                    borderBottom:'dashed 2px #ccc',
+                                    width:'50%',
+                                    marginRight:'auto',
+                                    marginLeft:'auto'
+                                }}></div>
+                            </div>
+                            <div className="col-xs-12" style={{textAlign:'center',marginBottom:'40px'}}>
+                                <div className={layoutStyle.projectText} style={{
+                                    width:'100%'
+                                }}>
+                                    - Other Project (Activity) -
+                                </div>
+                                <div className={layoutStyle.subText}>Resume on web
+                                <br></br>
+                                <mark>
+                                    <a href="https://github.com/joartspp/DyzCarSystem" target="_blank">Source Code</a>
+                                </mark>
+                                </div>
+                                <div className={layoutStyle.divpProject}>
+                                    <p className={layoutStyle.pProject}>
+                                        I started this project to learning <mark>Next.Js</mark> first time. I have learned many skill through this and presentz
+                                    </p>
+                                </div>
+                                <div style={{
+                                    borderBottom:'dashed 2px #ccc',
+                                    width:'50%',
+                                    marginRight:'auto',
+                                    marginLeft:'auto'
+                                }}></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+};
+
+
+export default MainContent;
