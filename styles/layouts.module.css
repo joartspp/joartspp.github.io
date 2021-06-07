@@ -153,6 +153,12 @@
         width: 280px;
         margin-bottom: 10px;
     }
+    .skillText {
+        font-size: 1.2rem;
+    }
+    .skillP {
+        font-size: 0.8rem;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -169,10 +175,21 @@
     .contact {
         font-size: 1.9rem;
     }
+    
+}
+
+@media (min-width:768px) {
+    .col-md-3 {
+        width: 100% !important;
+    }
+    .col-md-9 {
+        width: 100% !important;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
+
     .nameDiv {
         font-size: 2.5rem;
     }

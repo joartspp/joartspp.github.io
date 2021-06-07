@@ -29,13 +29,13 @@ const MainContent = ({kak}) => {
                             marginRight:'5px',
                             borderBottom:"dashed 2px #CCCCCC",
                         }}>
-                            <div className="col-xs-12 col-sm-4 col-md-3" style={{textAlign:'center'}}>
+                            <div className="col-xs-12 col-sm-4 col-md-12 col-lg-3" style={{textAlign:'center'}}>
                                 <span className={layoutStyle.pictureProfile} style={{
                                     backgroundImage:'url(/img/profile_nisit.jpg)',
                                     marginRight:'10px'
                                 }}></span>
                             </div>
-                            <div className="col-xs-12 col-sm-8 col-md-9" style={{
+                            <div className="col-xs-12 col-sm-8 col-md-12 col-lg-9" style={{
                                 padding:'10px'
                             }}>
                                 <p className={layoutStyle.pIntro}>
