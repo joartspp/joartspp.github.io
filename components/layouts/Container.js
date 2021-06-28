@@ -145,7 +145,7 @@ const MainContent = ({kak}) => {
                                 <div className={layoutStyle.projectText} style={{
                                     width:'100%'
                                 }}>
-                                    - Game Developer -
+                                    - Developer -
                                 </div>
                                 <div className={layoutStyle.subText}>ผู้พัฒนาระบบ(สคริป)บน FiveM (GTA V multiplayer platform)
                                 <br></br>
